@@ -1,23 +1,11 @@
+# VERSION
 
-# NAME
-
-Aion::View - It's new $module
-
-# SYNOPSIS
-
-    use Aion::View;
-
-# DESCRIPTION
-
-Aion::View is ...
-
-# LICENSE
-
-Copyright (C) Yaroslav O. Kosmina.
-
-This library is free software; you can redistribute it and/or modify
-it under the same terms as Perl itself.
+PREALPHA 
 
 # AUTHOR
 
-Yaroslav O. Kosmina <darviarush@mail.ru>
+© Yaroslav O. Kosmina <darviarush@mail.ru>
+
+# LICENSE
+
+⚖ GPLv3
