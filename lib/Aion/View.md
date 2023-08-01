@@ -5,6 +5,8 @@ Aion::View — объектно-ориентированный фреймвор�
 # SYNOPSIS
 
 ```perl
+use common::sense;
+
 # Пакет Calculator может складывать, вычитать, делить и умножать два числа
 package Calculator {
     use common::sense;
@@ -14,7 +16,7 @@ package Calculator {
     with 'Aion::Role::Controller';
 
     has a  => (is => 'ro+', isa => Num, in => 'path');
-    has op => (is => 'ro+', isa => MatchStr[qr![-+*/]!], in => 'query');
+    has op => (is => 'ro+', isa => MatchStr[qr!^[-+*/]$!], in => 'query');
     has b  => (is => 'ro+', isa => Num, in => 'path');
 
 #@method GET /calculate/{a}/{b} „Вычисляет выражение”
@@ -29,10 +31,10 @@ Calculator->new(a=>1, op=>"+", b=>2)->get # => 3
 
 # Через создание объекта запроса:
 use Aion::Request;
-my $request = Aion::Request->new(SLUG => {a => 1, b => 2}, QUERY_STRING => "op=%2B");
+my $request = Aion::Request->new(SLUG => {a => 5, b => 6}, QUERY_STRING => "op=%2B");
 my $calc = Calculator->new_from_request($request);
 
-$calc->get  # => 3
+$calc->get  # => 11
 
 $calc       # --> Calculator->new(a=>1, op=>"+", b=>2)
 
