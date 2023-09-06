@@ -1,6 +1,6 @@
 # NAME
 
-Aion::View — объектно-ориентированный фреймворк вроде Moose и Moo
+Aion::View — Web-fraimwork
 
 # SYNOPSIS
 
