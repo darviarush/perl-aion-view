@@ -4,7 +4,7 @@ PREALPHA
 
 # AUTHOR
 
-© Yaroslav O. Kosmina <darviarush@mail.ru>
+© Yaroslav O. Kosmina <dart@cpan.org>
 
 # LICENSE
 
